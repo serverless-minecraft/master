@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+	  - wget https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest -O ./ecs-cli
+	  - chmod +x ecs-cli
+	  - npm install -g awsmobile-cli
+  build:
+    commands:
+	  - ./createCluster.sh
