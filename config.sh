@@ -1,10 +1,12 @@
-export StackName="minecraft-cluster"
-export region="ap-southeast-2"
-export logGroupName=$StackName
+
+# The below is the most likely thing to need changing
 export domainName="mc.bofh.net.au"
+export region="ap-southeast-2"
+
+# The rest below here you probably don't need to change
+export StackName="minecraft-cluster"
+export logGroupName=$StackName
 export repositoryName="minecraft"
 aws configure set region $region
 export AWS_REGION=$region
 export AWS_DEFAULT_REGION=$region
-
-export zoneID=$(aws route53 list-hosted-zones --query "HostedZones[?Name==\`$domainName.\`].Id" --output text | cut -d'/' -f3)

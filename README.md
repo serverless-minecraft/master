@@ -12,3 +12,10 @@ cluster - where users can spin up and tear down servers at will.
 For anyone reading this right now, the work for this is all in a single
 private repo atm, I'm intending to clean it up and break it apart for
 proper publication.
+
+# Usage
+
+Take a copy of this repo, edit `config.sh` and replace the domain name and
+region, then run the `./createCluster.sh` script to create the cluster.
+
+More instructions to come - not functional yet.
